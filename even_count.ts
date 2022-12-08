@@ -17,3 +17,5 @@ for (let j: number = 0; j < limit; j++) {
 }
 
 console.log("Count of even numbers are ", count);
+
+export { }
