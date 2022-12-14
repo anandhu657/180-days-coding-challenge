@@ -1,7 +1,9 @@
 <div style="text-align: center;">
-  <h1>Hai {{name}}</h1>
-  <h3>This is your data</h3>
-  <p>name:{{data.name}}</p>
-  <p>age:{{data.age}}</p>
-  <p>domain:{{data.domain}}</p>
+  <h1>Hai {{name}} {{wish}}</h1>
+  <button (click)="goodMorning()">Good morning</button>
+  <button (click)="goodAfternoon()">Good Afternoon</button>
+
+  <h1>counter: {{counter}}</h1>
+  <button (click)="increment()">Increment</button>
+  <button (click)="decrement()">Decrement</button>
 </div>

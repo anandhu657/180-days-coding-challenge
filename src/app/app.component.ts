@@ -7,9 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public name = "anandhu";
-  public data = {
-    name: "anandhu",
-    age: 21,
-    domain: "MEAN STACK"
+  public wish = ""
+  public counter = 0;
+  goodMorning() {
+    this.wish = "good morning";
+  }
+
+  goodAfternoon() {
+    this.wish = "good afternoon";
+  }
+
+  increment() {
+    this.counter += 1;
+  }
+
+  decrement() {
+    this.counter -= 1;
   }
 }
