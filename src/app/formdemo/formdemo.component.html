@@ -1,0 +1,38 @@
+<div style="text-align: center;">
+    <h1>Forms</h1>
+</div>
+
+<div class="m-5">
+    <form #form="ngForm" (ngSubmit)="form.valid&&onsubmit()">
+        <div class="mb-3">
+            <label>First name</label>
+            <input type="text" class="form-control" name="firstname" required #firstname="ngModel"
+                [(ngModel)]="data.firstname">
+            <label class="text-danger" *ngIf="form.submitted&&firstname.errors?.['required']">First Name is
+                required</label>
+        </div>
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" name="lastname" required #lastname="ngModel"
+                [(ngModel)]="data.lastname">
+            <label class="text-danger" *ngIf="form.submitted&&lastname.errors?.['required']">Last name required</label>
+        </div>
+        <div class="mb-3">
+            <label>Email:</label>
+            <input type="email" class="form-control" name="email" required #email="ngModel" [(ngModel)]="data.email"
+                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <label class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">Email is required</label>
+            <label class="text-danger" *ngIf="form.submitted&&email.errors?.['pattern']">Invalid email</label>
+        </div>
+        <div class=" mb-3">
+            <label>Phone number</label>
+            <input type="number" class="form-control" name="phonenumber" required #phonenumber="ngModel"
+                [(ngModel)]="data.phonenumber" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+            <label class="text-danger" *ngIf="form.submitted&&phonenumber.errors?.['required']">Phone number
+                required</label>
+            <label class="text-danger" *ngIf="form.submitted&&phonenumber.errors?.['pattern']">Must be 10
+                digits</label>
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+</div>
