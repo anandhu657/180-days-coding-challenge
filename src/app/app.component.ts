@@ -6,22 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public name = "anandhu";
-  public wish = ""
-  public counter = 0;
-  goodMorning() {
-    this.wish = "good morning";
-  }
+  public count = 0;
+  public str = "";
+  public is_hidden = true;
 
-  goodAfternoon() {
-    this.wish = "good afternoon";
+  check() {
+    this.is_hidden = false;
+    if (this.count % 2 == 0) {
+      this.str = "even";
+    } else {
+      this.str = "odd";
+    }
   }
-
-  increment() {
-    this.counter += 1;
-  }
-
-  decrement() {
-    this.counter -= 1;
+  clear() {
+    this.is_hidden = true;  
   }
 }
