@@ -6,19 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public count = 0;
-  public str = "";
-  public is_hidden = true;
-
-  check() {
-    this.is_hidden = false;
-    if (this.count % 2 == 0) {
-      this.str = "even";
-    } else {
-      this.str = "odd";
-    }
-  }
-  clear() {
-    this.is_hidden = true;  
-  }
+  public users = [
+    { name: "A", age: 29 },
+    { name: "B", age: 34 },
+    { name: "C", age: 32 },
+    { name: "D", age: 43 },
+    { name: "E", age: 33 }
+  ]
 }

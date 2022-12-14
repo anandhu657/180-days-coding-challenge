@@ -1,7 +1,15 @@
 <div style="text-align: center;">
-  <h1>Two way data binding</h1>
-  <input type="number" [(ngModel)]="count">
-  <button (click)="check()">CheckCount</button>
-  <button (click)="clear()">Clear</button>
-  <h3 [hidden]="is_hidden">{{count}} -- {{str}}</h3>
+  <h1>For and if</h1>
+  <table>
+    <thead>
+      <th>Name:</th>
+      <th>Age:</th>
+    </thead>
+    <tbody *ngFor="let user of users">
+      <tr *ngIf="user.age>33">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
