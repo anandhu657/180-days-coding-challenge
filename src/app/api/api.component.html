@@ -1,0 +1,19 @@
+<div>
+    <h3>Api calling in angular</h3>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>userId</th>
+            <th>title</th>
+            <th>body</th>
+        </thead>
+        <tbody *ngFor="let item of postArray">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.userId}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
