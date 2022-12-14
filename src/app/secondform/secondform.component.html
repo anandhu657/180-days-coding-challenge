@@ -1,0 +1,35 @@
+<h3>Reactive forms</h3>
+<div class="container-fluid">
+    <form [formGroup]="regiestrationForm" (ngSubmit)="onsubmit()">
+        <label>First Name</label>
+        <input type="text" placeholder="First name" class="form-control" formControlName="firstname"
+            (ngClass)="{'is-invalid':submit&&f.firstname.errors}">
+        <div *ngIf="submit&&f.firstname.errors" class="text-danger">
+            <div *ngIf="f.firstname.errors?.['required']"><small>Firstname is required</small></div>
+        </div>
+
+        <label>Last Name</label>
+        <input type="text" placeholder="Last name" class="form-control" formControlName="lastname"
+            (ngClass)="{'is-invalid':submit&&f.lastname.errors}">
+        <div *ngIf="submit&&f.lastname.errors" class="text-danger">
+            <div *ngIf="f.lastname.errors?.['required']"><small>Lastname is required</small></div>
+        </div>
+        <label>email</label>
+        <input type="email" placeholder="email" class="form-control" formControlName="email"
+            (ngClass)="{'is-invalid':submit&&f.email.errors}">
+        <div *ngIf="submit&&f.email.errors" class="text-danger">
+            <div *ngIf="f.email.errors?.['required']"><small>Email is required</small></div>
+            <div *ngIf="f.email.errors?.['email']"><small>Invalid email</small></div>
+        </div>
+
+        <label>Phone number</label>
+        <input type="number" placeholder="Phone number" class="form-control" formControlName="phone"
+            (ngClass)="{'is-invalid':submit&&f.phone.errors}">
+        <div *ngIf="submit&&f.phone.errors" class="text-danger">
+            <div *ngIf="f.phone.errors?.['required']"><small>Phone number is required</small></div>
+            <div *ngIf="f.phone.errors?.['pattern']"><small>Invalid Number</small></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

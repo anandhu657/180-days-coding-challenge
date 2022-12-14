@@ -11,6 +11,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormdemoComponent } from './formdemo/formdemo.component';
+import { SecondformComponent } from './secondform/secondform.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormdemoComponent } from './formdemo/formdemo.component';
     AboutComponent,
     ContactUsComponent,
     ApiComponent,
-    FormdemoComponent
+    FormdemoComponent,
+    SecondformComponent
   ],
   imports: [
     BrowserModule,
