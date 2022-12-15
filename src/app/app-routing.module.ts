@@ -6,6 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormdemoComponent } from './formdemo/formdemo.component';
 import { HomeComponent } from './home/home.component';
 import { SecondformComponent } from './secondform/secondform.component';
+import { ThirdformComponent } from './thirdform/thirdform.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'postapi', component: ApiComponent },
   { path: 'form', component: FormdemoComponent },
-  { path: 'secondform', component: SecondformComponent }
+  { path: 'secondform', component: SecondformComponent },
+  { path: 'thirdform', component: ThirdformComponent }
 ];
 
 @NgModule({

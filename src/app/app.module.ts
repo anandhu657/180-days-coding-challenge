@@ -12,6 +12,7 @@ import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormdemoComponent } from './formdemo/formdemo.component';
 import { SecondformComponent } from './secondform/secondform.component';
+import { ThirdformComponent } from './thirdform/thirdform.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SecondformComponent } from './secondform/secondform.component';
     ContactUsComponent,
     ApiComponent,
     FormdemoComponent,
-    SecondformComponent
+    SecondformComponent,
+    ThirdformComponent
   ],
   imports: [
     BrowserModule,
